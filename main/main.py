@@ -20,7 +20,7 @@ work = "rVhh3b"
 # Might need to figure out a way for the scraper to find these elements itself, if google changes them periodically.
 # Want to add menu with colors later, updating the cycle so it goes Open webdriver -> checks if users logged into google/classroom account (continues o prompts login) & saving profile data 
 # go to class home page -> inject class list retriever 
-# in cli lets user pick the classes they want to scrape the grades from 
+# in cli lets user pick the classes they want to scrape the grades from
 # ex. Pick your classes to scrape:
 # [1] Class 1
 # [2] Class 2
@@ -99,10 +99,21 @@ def open_browser():
     driver = webdriver.Firefox(options=options)
     return driver
 
+def cleanurls(urls):
+    cleaned = []
+    for url in urls:
+        href = url.get("href")
+
+        if href.endswith("default"):
+            cleaned.append(url)
+    return cleaned
 
 def main():
     driver = open_browser()
     driver.get("https://classroom.google.com/")
+
+    base = "https://classroom.google.com"
+
 
     time.sleep(1)
     WebDriverWait(driver, 60).until(EC.presence_of_element_located((By.TAG_NAME, "body")))
@@ -110,15 +121,14 @@ def main():
     class_links = get_enrolled_class_links(driver) or []
     if not class_links:
         print("No enrolled class links found. Make sure the Classroom page is fully loaded and the 'Enrolled' section is visible.")
+    class_links = cleanurls(class_links)
     print(f"Found {len(class_links)} class links")
 
     all_results = []
-    base = "https://classroom.google.com"
     for c in class_links:
-        class_url = c.get("href")
-        if class_url.endswith("default"): #make sure it is only the assignemnts page for the class, they all end in /defualt. Avoids that classes home page for now. 
-            class_url = base + class_url
+        class_url = f"https://classroom.google.com{c.get('href')}"
         print(f"\n➡ Visiting class: {c.get('title') or c.get('aria_label')} -> {class_url}")
+
         try:
             driver.get(class_url)
             WebDriverWait(driver, 200).until(EC.presence_of_element_located((By.TAG_NAME, "body")))
