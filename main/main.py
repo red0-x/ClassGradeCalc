@@ -109,6 +109,18 @@ def cleanurls(urls):
     return cleaned
 
 def main():
+    banner = """┌─┐┬  ┌─┐┌─┐┌─┐   ┌─┐┌─┐┬  ┌─┐
+│  │  ├─┤└─┐└─┐───│  ├─┤│  │  
+└─┘┴─┘┴ ┴└─┘└─┘   └─┘┴ ┴┴─┘└─┘"""
+    print(banner)
+    print("Google Classroom Grade Scraper")
+    print("[1] Start scraping grades")
+    option = input("\n>")
+    if option.strip() == "1":
+        bot()
+    else:
+        return
+def bot():
     driver = open_browser()
     driver.get("https://classroom.google.com/")
 
@@ -127,7 +139,7 @@ def main():
     all_results = []
     for c in class_links:
         class_url = f"https://classroom.google.com{c.get('href')}"
-        print(f"\n➡ Visiting class: {c.get('title') or c.get('aria_label')} -> {class_url}")
+        print(f"\n[!] Visiting class: {c.get('title') or c.get('aria_label')} -> {class_url}")
 
         try:
             driver.get(class_url)
