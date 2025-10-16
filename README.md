@@ -7,7 +7,7 @@
 ### Usage: 
  - clone repo & create virtual environment 
 
- ``$> git clone [REPO LINK] && python3 -m venv .venv``
+ ``$> git clone https://github.com/red0-x/ClassGradeCalc.git && python3 -m venv .venv``
  
  - activate virtual environment 
  
