@@ -1,4 +1,4 @@
-### 🤓 ClassGradeCalc 🖩 - The Google Classroom Grade Calculator 
+### 🤓 red0-x/ClassGradeCalc 🖩 - The Google Classroom Grade Calculator 
  Adds all of your Google Classroom grades together to give a letter grade
  - I made this because my school grades everything in the classroom and only announces the grades quarterly; I don't want to fall behind :)
  - ⚠️ Use with caution, scraping Google is AGAINST their tos.
