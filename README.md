@@ -1,8 +1,14 @@
 ### 🤓 red0-x/ClassGradeCalc 🖩 - The Google Classroom Grade Calculator 
+
+# [WIP]
+###### -> Does NOT scrape properly at the time of 10/15/2025! 😥
+
  Adds all of your Google Classroom grades together to give a letter grade
  - I made this because my school grades everything in the classroom and only announces the grades quarterly; I don't want to fall behind :)
  - ⚠️ Use with caution, scraping Google is AGAINST their tos.
  - ️️⚠️ It's possible your Google account could get banned, and you might get in trouble with your school! ⚠
+
+
 
 ### Usage: 
  - clone repo & create virtual environment 
