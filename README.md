@@ -1,4 +1,4 @@
-### 🤓 red0-x/ClassGradeCalc 🖩 - The Google Classroom Grade Calculator 
+<img width="1920" height="1050" alt="image" src="https://github.com/user-attachments/assets/a38a894e-a574-4ee5-a247-ac29b4e579f3" />### 🤓 red0-x/ClassGradeCalc 🖩 - The Google Classroom Grade Calculator 
 
 # [WIP]
 ###### -> Does NOT scrape properly at the time of 10/15/2025! 😥
@@ -35,12 +35,15 @@
  - Once set up simply start scraping grades.
 
 Example:
-<img width="1920" height="1052" alt="image" src="https://github.com/user-attachments/assets/0603c389-07c7-4d54-8b4d-35b104ef97be" />
-
+<img width="1920" height="1050" alt="image" src="https://github.com/user-attachments/assets/88d0ed2b-22dd-4d68-9907-9ab9915c991d" />
 
 ## Changelog:
 
  ### 10/15/2025
  - Added Usage Image + ReadMe & Menu. 
- - Made Link cleaner so it only provides the work page. 
+ - Made Link cleaner so it only provides the work page.
+### 10/16/2025
+ - Made the menu cool with a gradient & typing effect
+ - Segregated Utility functions so main.py isn't very big (better readability)
+ - cleaned JS injection payload
 
