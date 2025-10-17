@@ -1,4 +1,6 @@
-<img width="1920" height="1050" alt="image" src="https://github.com/user-attachments/assets/a38a894e-a574-4ee5-a247-ac29b4e579f3" />### 🤓 red0-x/ClassGradeCalc 🖩 - The Google Classroom Grade Calculator 
+<img width="701" height="162" alt="image-removebg-preview" src="https://github.com/user-attachments/assets/46c6abc9-e8f8-4665-bc7a-3fb162d0bdff" />
+
+### 🤓 red0-x/ClassGradeCalc 🖩 - The Google Classroom Grade Calculator 
 
 # [WIP]
 ###### -> Does NOT scrape properly at the time of 10/15/2025! 😥
